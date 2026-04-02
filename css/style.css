@@ -518,6 +518,8 @@ a:hover {
   padding: 32px 40px;
   position: relative;
   min-height: 0;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 /* Background decorative gradient blobs */
@@ -1084,9 +1086,17 @@ a:hover {
     display: block;
   }
 
+  #content {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
   #tutorial-panel {
     padding: 24px 20px;
     padding-top: 68px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
   }
 
   #tutorial-content h1 {

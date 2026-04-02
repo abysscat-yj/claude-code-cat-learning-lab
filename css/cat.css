@@ -1,0 +1,407 @@
+/* ==========================================================================
+   Claude Code Cat Learning Lab - Shrimp Cat Character
+   SVG-based animated character matching the reference design
+   ========================================================================== */
+
+/* ==========================================================================
+   Cat Container
+   ========================================================================== */
+
+#shrimp-cat {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 16px;
+  user-select: none;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.cat-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 6px 12px rgba(224, 96, 80, 0.2));
+}
+
+/* ==========================================================================
+   Keyframe Animations
+   ========================================================================== */
+
+@keyframes idle-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes antenna-sway {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  75% { transform: rotate(-3deg); }
+}
+
+@keyframes blink {
+  0%, 42%, 48%, 100% { transform: scaleY(1); }
+  45% { transform: scaleY(0.05); }
+}
+
+@keyframes happy-bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  30% { transform: translateY(-12px) scale(1.04); }
+  60% { transform: translateY(-3px) scale(0.97); }
+  80% { transform: translateY(-8px) scale(1.02); }
+}
+
+@keyframes thinking-tilt {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+}
+
+@keyframes celebrate {
+  0%, 100% { transform: translateY(0) scale(1) rotate(0deg); }
+  15% { transform: translateY(-14px) scale(1.07) rotate(-4deg); }
+  30% { transform: translateY(-3px) scale(0.96) rotate(2deg); }
+  45% { transform: translateY(-10px) scale(1.05) rotate(-2deg); }
+  60% { transform: translateY(-2px) scale(0.98) rotate(1deg); }
+  80% { transform: translateY(-7px) scale(1.03) rotate(-1deg); }
+}
+
+@keyframes wave-claw {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  25% { transform: rotate(-20deg) translateY(-8px); }
+  50% { transform: rotate(-15deg) translateY(-10px); }
+  75% { transform: rotate(-25deg) translateY(-6px); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1) rotate(180deg); }
+}
+
+@keyframes claw-pinch {
+  0%, 70%, 100% { transform: scaleX(1); }
+  35% { transform: scaleX(0.85); }
+}
+
+@keyframes mouth-talk {
+  0%, 55%, 100% { transform: scaleY(1); }
+  25% { transform: scaleY(1.8); }
+}
+
+@keyframes eye-sparkle {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.2); }
+}
+
+/* ==========================================================================
+   State: Idle
+   ========================================================================== */
+
+.cat-idle {
+  animation: idle-bounce 3s ease-in-out infinite;
+}
+
+.cat-idle .cat-antennae {
+  transform-origin: 100px 45px;
+  animation: antenna-sway 4s ease-in-out infinite;
+}
+
+.cat-idle .cat-eyes {
+  transform-origin: 100px 75px;
+  animation: blink 4.5s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   State: Happy
+   ========================================================================== */
+
+.cat-happy {
+  animation: happy-bounce 1.3s ease-in-out infinite;
+}
+
+/* Happy eyes - squinted crescents */
+.cat-happy .eye-iris-left,
+.cat-happy .eye-iris-right,
+.cat-happy .eye-pupil,
+.cat-happy .eye-highlight,
+.cat-happy .eye-white {
+  transition: all 0.2s ease;
+}
+
+.cat-happy .cat-eyes {
+  animation: eye-sparkle 1s ease-in-out infinite;
+}
+
+.cat-happy .cat-claw-left {
+  animation: claw-pinch 1.5s ease-in-out infinite;
+  transform-origin: 38px 108px;
+}
+
+.cat-happy .cat-claw-right {
+  animation: claw-pinch 1.5s ease-in-out infinite 0.3s;
+  transform-origin: 162px 108px;
+}
+
+.cat-happy .cat-antennae {
+  transform-origin: 100px 45px;
+  animation: antenna-sway 2s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   State: Thinking
+   ========================================================================== */
+
+.cat-thinking {
+  animation: thinking-tilt 2.5s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.cat-thinking .cat-antennae {
+  transform-origin: 100px 45px;
+  animation: antenna-sway 1.5s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   State: Encouraging
+   ========================================================================== */
+
+.cat-encouraging {
+  animation: idle-bounce 2s ease-in-out infinite;
+}
+
+.cat-encouraging .cat-claw-left {
+  animation: claw-pinch 1.2s ease-in-out infinite;
+  transform-origin: 38px 108px;
+}
+
+.cat-encouraging .cat-claw-right {
+  animation: claw-pinch 1.2s ease-in-out infinite 0.2s;
+  transform-origin: 162px 108px;
+}
+
+.cat-encouraging .cat-antennae {
+  transform-origin: 100px 45px;
+  animation: antenna-sway 2.5s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   State: Celebrating
+   ========================================================================== */
+
+.cat-celebrating {
+  animation: celebrate 1.5s ease-in-out infinite;
+}
+
+.cat-celebrating .cat-claw-left {
+  animation: wave-claw 0.6s ease-in-out infinite;
+  transform-origin: 38px 115px;
+}
+
+.cat-celebrating .cat-claw-right {
+  animation: wave-claw 0.6s ease-in-out infinite 0.15s;
+  transform-origin: 162px 115px;
+}
+
+.cat-celebrating .cat-antennae {
+  transform-origin: 100px 45px;
+  animation: antenna-sway 0.8s ease-in-out infinite;
+}
+
+/* Sparkle particles */
+.cat-celebrating::before,
+.cat-celebrating::after {
+  content: '\2726';
+  position: absolute;
+  font-size: 16px;
+  z-index: 10;
+  animation: sparkle 0.8s ease-in-out infinite;
+}
+
+.cat-celebrating::before {
+  top: 5px;
+  left: 15px;
+  color: #ffd700;
+  animation-delay: 0s;
+}
+
+.cat-celebrating::after {
+  top: 0px;
+  right: 15px;
+  font-size: 13px;
+  color: #a29bfe;
+  animation-delay: 0.4s;
+}
+
+/* ==========================================================================
+   State: Speaking
+   ========================================================================== */
+
+.cat-speaking .cat-mouth {
+  transform-origin: 100px 90px;
+  animation: mouth-talk 0.5s ease-in-out infinite;
+}
+
+.cat-speaking .cat-antennae {
+  transform-origin: 100px 45px;
+  animation: antenna-sway 2s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   State: Waving
+   ========================================================================== */
+
+.cat-waving .cat-claw-right {
+  animation: wave-claw 1s ease-in-out infinite;
+  transform-origin: 162px 115px;
+}
+
+.cat-waving .cat-antennae {
+  transform-origin: 100px 45px;
+  animation: antenna-sway 2s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   Speech Bubble
+   ========================================================================== */
+
+#speech-bubble {
+  position: relative;
+  margin: 0 auto;
+  max-width: 420px;
+  padding: 14px 20px;
+  background: var(--bg-card, rgba(26, 26, 46, 0.8));
+  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.08));
+  border-radius: 18px;
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 5;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary, #b8b8d0);
+  font-weight: 500;
+}
+
+#speech-bubble.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Triangle pointer pointing up */
+#speech-bubble::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 8px solid var(--glass-border, rgba(255, 255, 255, 0.08));
+}
+
+#speech-bubble::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 7px solid var(--bg-card, rgba(26, 26, 46, 0.8));
+}
+
+/* Light theme */
+[data-theme="light"] #speech-bubble {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  color: #555;
+}
+
+[data-theme="light"] #speech-bubble::before {
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] #speech-bubble::after {
+  border-bottom-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Typing cursor */
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 14px;
+  background: var(--primary, #e8734a);
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: cursor-blink 0.8s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* ==========================================================================
+   Accessibility - Reduced Motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  #shrimp-cat,
+  .cat-idle,
+  .cat-happy,
+  .cat-thinking,
+  .cat-encouraging,
+  .cat-celebrating,
+  .cat-speaking,
+  .cat-waving,
+  .cat-idle .cat-antennae,
+  .cat-idle .cat-eyes,
+  .cat-happy .cat-claw-left,
+  .cat-happy .cat-claw-right,
+  .cat-happy .cat-antennae,
+  .cat-thinking .cat-antennae,
+  .cat-encouraging .cat-claw-left,
+  .cat-encouraging .cat-claw-right,
+  .cat-encouraging .cat-antennae,
+  .cat-celebrating .cat-claw-left,
+  .cat-celebrating .cat-claw-right,
+  .cat-celebrating .cat-antennae,
+  .cat-speaking .cat-mouth,
+  .cat-speaking .cat-antennae,
+  .cat-waving .cat-claw-right,
+  .cat-waving .cat-antennae {
+    animation: none !important;
+  }
+
+  .cat-celebrating::before,
+  .cat-celebrating::after {
+    animation: none !important;
+    display: none;
+  }
+
+  #speech-bubble {
+    transition: none !important;
+  }
+
+  .typing-cursor {
+    animation: none !important;
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  #shrimp-cat {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 12px;
+  }
+}

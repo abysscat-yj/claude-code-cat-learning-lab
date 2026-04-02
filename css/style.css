@@ -1063,6 +1063,18 @@ a:hover {
    ========================================================================== */
 
 @media (max-width: 767px) {
+  body {
+    overflow: auto;
+    overflow-x: hidden;
+  }
+
+  #app {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+
   .hamburger-btn {
     display: flex;
   }
@@ -1072,6 +1084,7 @@ a:hover {
     top: 0;
     left: 0;
     height: 100vh;
+    height: 100dvh;
     transform: translateX(-100%);
     box-shadow: none;
     z-index: 150;
@@ -1087,16 +1100,17 @@ a:hover {
   }
 
   #content {
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow: visible;
   }
 
   #tutorial-panel {
     padding: 24px 20px;
     padding-top: 68px;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    touch-action: pan-y;
+    overflow-y: visible;
+    min-height: auto;
   }
 
   #tutorial-content h1 {

@@ -1,10 +1,10 @@
-<div align="center">
+![image](https://github.com/user-attachments/assets/0d83f348-c022-4635-80cb-dca7d985ce1c)<div align="center">
 
 # 🐱 Claude Code 猫猫学院
 
 **小虾猫带你从入门到精通 Claude Code**
 
-一个交互式的静态网页教程，无需后端，打开即学。
+基于 Claude Code 官方文档和各类开源教程打造，一个交互式的静态网页教程，无需后端，打开即学！
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-blue)](https://abysscat-yj.github.io/claude-code-cat-learning-lab/)
@@ -17,11 +17,10 @@
 
 ## Preview
 
-| 暗色主题 | 亮色主题 |
-|---------|---------|
-| 小虾猫导师 + 语音气泡 + 代码高亮 | 一键切换，护眼模式 |
-
 > 纯前端项目，双击 `index.html` 即可体验，也可部署到 GitHub Pages。
+
+![image](https://github.com/user-attachments/assets/063b4e72-5c10-44db-9772-b10b674fc472)
+
 
 ---
 

@@ -4,6 +4,8 @@
 
 基于 Claude Code 官方文档和各类开源教程打造，一个交互式的静态网页教程，无需后端，打开即学！
 
+**👉 [在线体验](https://abysscat-yj.github.io/claude-code-cat-learning-lab/)**
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-blue)](https://abysscat-yj.github.io/claude-code-cat-learning-lab/)
 

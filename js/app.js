@@ -222,6 +222,8 @@
       const panel = $('#tutorial-panel');
       if (panel) panel.scrollTop = 0;
       content.scrollTop = 0;
+      // On mobile, body is the scroll container
+      window.scrollTo(0, 0);
 
       // Cat speaks — this is the ONLY speak call per step (no conflicts)
       catSpeakTimer = setTimeout(() => {

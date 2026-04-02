@@ -1051,11 +1051,13 @@ a:hover {
   -webkit-backdrop-filter: blur(4px);
   z-index: 90;
   opacity: 0;
+  pointer-events: none;
   transition: opacity var(--transition-base);
 }
 
 .sidebar-overlay.visible {
   opacity: 1;
+  pointer-events: auto;
 }
 
 /* ==========================================================================

@@ -1,5 +1,3 @@
-![image](https://github.com/user-attachments/assets/0d83f348-c022-4635-80cb-dca7d985ce1c)<div align="center">
-
 # 🐱 Claude Code 猫猫学院
 
 **小虾猫带你从入门到精通 Claude Code**

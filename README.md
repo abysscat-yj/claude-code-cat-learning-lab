@@ -9,7 +9,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-blue)](https://abysscat-yj.github.io/claude-code-cat-learning-lab/)
 
-<img src="https://img.shields.io/badge/modules-7-orange" /> <img src="https://img.shields.io/badge/steps-55-green" /> <img src="https://img.shields.io/badge/backend-none-lightgrey" />
+<img src="https://img.shields.io/badge/modules-7-orange" /> <img src="https://img.shields.io/badge/steps-56-green" /> <img src="https://img.shields.io/badge/backend-none-lightgrey" />
 
 </div>
 
@@ -26,7 +26,7 @@
 
 ## Features
 
-- **7 大模块 / 55 个步骤** — 从安装到 MCP、Sub-Agents、Agent SDK 的完整学习路径
+- **7 大模块 / 56 个步骤** — 从安装到 MCP、Sub-Agents、Agent SDK 的完整学习路径
 - **小虾猫导师** — 精细 SVG 角色，带打字机效果的语音气泡，多种表情状态
 - **零依赖** — 纯 HTML + CSS + JS，无框架、无构建、无后端
 - **暗色/亮色主题** — 一键切换，自动记忆偏好
@@ -41,7 +41,7 @@
 | # | 模块 | 内容 | 步骤数 |
 |---|------|------|--------|
 | 1 | 🚀 欢迎 & 安装 | Claude Code 是什么、四层技术栈、安装验证 | 5 |
-| 2 | 👣 初步探索 | Agentic Loop、五大原子操作、工具风险与权限、上下文管理 | 10 |
+| 2 | 👣 初步探索 | Agentic Loop、五大原子操作、工具风险与权限、上下文管理 | 11 |
 | 3 | 💻 代码实战 | 文件读写、代码修改、测试、重构、工具组合涌现、Bash | 8 |
 | 4 | 🌿 Git 工作流 | 智能提交、分支管理、PR 创建、冲突解决 | 5 |
 | 5 | 🧠 CLAUDE.md 与记忆 | 五层记忆架构、认知经济学、条件作用域、Auto Memory | 8 |
@@ -88,7 +88,7 @@ claude-code-cat-learning-lab/
 ├── js/
 │   ├── app.js          # 主控制器（路由、导航、事件）
 │   ├── cat.js          # CatGuide 类（状态机、打字机、气泡）
-│   ├── tutorials.js    # 教程内容数据（7 模块 55 步骤）
+│   ├── tutorials.js    # 教程内容数据（7 模块 56 步骤）
 │   ├── diagrams.js     # SVG 图表渲染
 │   └── progress.js     # 进度追踪（localStorage）
 └── .gitignore

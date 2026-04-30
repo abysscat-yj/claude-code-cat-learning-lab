@@ -264,6 +264,37 @@ git diff | claude -p "总结这些变更"</code></pre>
         catState: 'thinking'
       },
       {
+        title: '养一只编程小伙伴',
+        content: `
+          <h3>/buddy — 你的终端宠物</h3>
+          <p>编程累了？Claude Code 内置了一个趣味功能——<code>/buddy</code>。输入后，一只小生物会在终端里破壳而出，陪着你写代码。</p>
+          <pre><code>/buddy</code></pre>
+          <div class="info-box">
+            <strong>它会做什么？</strong>
+            <ul>
+              <li>安静地趴在终端角落，看着你敲代码</li>
+              <li>偶尔动一动、眨眨眼，提醒你它的存在</li>
+              <li>长时间不写代码时，可能会打瞌睡</li>
+              <li>完成大段代码后，它会有小小的庆祝动作</li>
+            </ul>
+          </div>
+          <p>它不会干扰你的正常工作，只是一个可爱的陪伴。想让它离开时，再次输入 <code>/buddy</code> 即可。</p>
+          <div class="tip-box">
+            <strong>彩蛋起源：</strong><code>/buddy</code> 是 2026 年 4 月 1 日（愚人节）加入的彩蛋功能，因为反响很好而保留了下来。这体现了 Claude Code 团队的理念：工具可以很强大，也可以很有趣。
+          </div>
+          <h4>另一个趣味命令：/powerup</h4>
+          <p>如果你想用更互动的方式学习 Claude Code，可以试试 <code>/powerup</code>：</p>
+          <pre><code>/powerup</code></pre>
+          <p>这是一个内置的交互式课程系统，通过动画演示教你 Claude Code 的各种功能，很适合初学者上手。</p>
+          <div class="try-it-box">
+            <strong>动手试试：</strong>输入 <code>/buddy</code> 孵化你的编程小伙伴吧！
+          </div>
+        `,
+        catMessage: '编程不孤单，有小伙伴陪着你喵～ 试试 /buddy 吧 (◍•ᴗ•◍)',
+        catState: 'happy',
+        command: '/buddy'
+      },
+      {
         title: '理解权限系统',
         content: `
           <h3>权限系统 — Harness 的安全围栏</h3>
